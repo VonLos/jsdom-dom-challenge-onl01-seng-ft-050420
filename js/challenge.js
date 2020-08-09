@@ -54,5 +54,5 @@ heart.addEventListener('click', like)
 minus.addEventListener('click', decrementCounter)
 plus.addEventListener('click', incrementCounter)
 pause.addEventListener('click', pauseHandler)
-document.addEventListener('DOMContentLoaded', timer)
+document.addEventListener('DOMContentLoaded', counterStart)
 
