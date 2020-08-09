@@ -7,14 +7,18 @@ const pause = document.getElementById('pause')
 const button = document.querySelectorAll('button')
 let seconds = 0
 let likeCounter = 0
-let timer = setInterval(counterStart, 1000)
+let timer = undefined
 
 function counterStart() {
+    let timer = setInterval()
     counter.innerHTML = seconds++
 }
+
 function incrementCounter(){
     seconds++
 }
+
+
 function decrementCounter(){
     seconds--
 }
@@ -50,5 +54,5 @@ heart.addEventListener('click', like)
 minus.addEventListener('click', decrementCounter)
 plus.addEventListener('click', incrementCounter)
 pause.addEventListener('click', pauseHandler)
-document.addEventListener('DOMContentLoaded', counterStart)
+document.addEventListener('DOMContentLoaded', timer)
 
