@@ -7,11 +7,10 @@ const pause = document.getElementById('pause')
 const button = document.querySelectorAll('button')
 let seconds = 0
 let likeCounter = 0
+let timer = setInterval(counterStart, 1000)
 
 function counterStart() {
-    setInterval(function() {
-        counter.innerHTML = seconds++;
-        }, 1000);
+    counter.innerHTML = seconds++
 }
 function incrementCounter(){
     seconds++
@@ -44,7 +43,7 @@ function pauseHandler() {
     button[i].disabled = true
     i++
     }
-    Object.freeze(seconds)
+    clearInterval(timer)
 }
 
 heart.addEventListener('click', like)
