@@ -10,8 +10,8 @@ let likeCounter = 0
 let timer = undefined
 
 function counterStart() {
-    let timer = setInterval()
-    counter.innerHTML = seconds++
+    let timer = setInterval(function(){
+    counter.innerHTML = seconds++}, 1000)
 }
 
 function incrementCounter(){
